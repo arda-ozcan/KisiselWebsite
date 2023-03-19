@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1rem;
+    margin: 0;
+}
+header {
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    top: 0;
+}
+.anasayfa {
+    margin: 0;
+    display: inline-block;
+    margin-left: 20px;
+    font-family: 'Tilt Warp', cursive;
+} 
+.anasayfa a {
+    text-decoration: none;
+    color: black;
+}
+.hakkimda a {
+    text-decoration: none;
+    color: black;
+}
+.sosyal_medya a {
+    text-decoration: none;
+    color: black;
+}
+.hakkimda {
+    margin-left: 85px;
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 9px;
+} 
+.sosyal_medya {
+    margin-left: 7px;
+    display: inline-block;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 9px;
+}
+.once {
+    height: 100vh;
+    background: url(bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+}
+.caption .border {
+    background-color: #111;
+    color: #fff;
+    padding: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+.tanitim {
+    height: 20vh;
+}
+

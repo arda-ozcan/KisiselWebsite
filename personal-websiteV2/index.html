@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Onur Arda Özcan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .header {
+            height: 100vh;
+            background: url(images/bg.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(230, 230, 230, .4);
+            padding: 0 20px;
+        }
+
+        .navbar a {
+            /* margin-right: auto; */
+            align-self: center;
+            color: #000;
+            font-size: 20px;
+            text-decoration: none;
+            padding: 10px;
+        }
+
+        #baslik {
+            font-family: 'Oswald', sans-serif;
+            font-size: 20px;
+        }
+
+        .navigation {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .navigation a {
+            display: block;
+            padding: 16px;
+            line-height: 1.2;
+
+        }
+        .navigation a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .navigation li:last-child {
+            display: none;
+        }
+
+        #hakkinda {
+            display: flex;
+        }
+
+        /* #hakkimda_image {
+            background-position: center;
+            background-repeat: no-repeat;
+            /* background-size: cover; */
+            /* background-size: 100px; */
+        /* }  */
+
+        .caption {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 100%;
+            text-align: center;
+        }
+        .caption .border {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+        }
+        
+        .ph {
+            background-color: #aaa;
+            width: 100%;
+            padding: 20px;
+            margin-top: 10px;
+        }
+
+        main {
+            display: flex;
+        }
+
+        #sidebar {
+            background-color: #f1f1f1;
+            padding: 20px;
+            flex: 25%;
+            order: 1;
+            margin-left: 1rem;
+            margin-right: 1rem;
+            margin-top: 1rem;
+        }
+
+        #content {
+            flex: 75%;
+            margin-left: 1rem;
+            padding: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        .box {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: goldenrod;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        @media (max-width: 600px ) {
+            main, .navbar {
+                flex-direction: column;
+                position: relative;
+            }
+            .navbar a {
+                align-self: flex-start;
+            }
+            .navigation {
+                flex-direction: column;
+            }
+            .navigation a {
+                text-align: center;
+                padding: 10px;
+                border-top: 1px solid rgba(255, 255, 255, .3);
+                border-bottom: 1px solid rgba(0, 0, 0, .1);
+            }
+            .navigation li:last-child {
+                display: block;
+                position: absolute;
+                top: 0;
+                right: 10px;    
+            }
+            .responsive .navigation li:not(:last-child) {
+                display: none   ;
+            }
+            .navigation li:last-child a {
+                border-bottom: none;
+            }
+
+            #sidebar {
+                padding: 25px;
+                order: -1;
+                margin-right: 0rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<div class="header">
+    <nav id="open-nav" class="responsive navbar">
+        <a href="#" id="baslik">Web Developer</a>
+        <ul class="navigation">
+            <li><a href="#hakkinda">Hakkında</a></li>
+            <li><a href="#">Siteler</a></li>
+            <li><a href="#">İletişim</a></li>
+            <li><a href="#" onclick="displayMenu()">
+                <i class="fa fa-bars"></i>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="caption">
+        <div class="border">Onur Arda Özcan</div>
+    </div>
+</div>
+    <main>
+        <section id="hakkinda">
+            <div id="sidebar">
+                <div class="box">
+                    <h1>Hobiler</h1>
+                    <div class="ph"></div>
+                    <p>İşimiz, hayatımız, en büyük zevkimiz bilgisayar olsa da bazen masa başından kalkıp kafa dağıtmak gerekebiliyor. Futbolda kafamı dağıtmak için en çok kullandığım aktivitelerin başında geliyor.</p>
+                </div>
+                <div class="ph" style="height: 50px;"></div>
+                <div class="ph" style="height: 50px;"></div>
+                <div class="ph" style="height: 50px;"></div>
+            </div>
+
+            <div id="content">
+                <div class="box">
+                    <h2>Hakkımda</h2>
+                    <!-- <div id="hakkimda_image" class="ph" style="height: 200px;"><img src="images/arda.JPG" alt="arda"></div> -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat corrupti dolorum repellat laudantium nisi, expedita repellendus animi velit, corporis nesciunt illo mollitia alias atque veniam dolores! Vel, magnam aut.</p>
+                </div>
+                <div class="box">
+                    <h2>Lorem, ipsum.</h2>
+                    <div class="ph" style="height: 200px;"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat corrupti dolorum repellat laudantium nisi, expedita repellendus animi velit, corporis nesciunt illo mollitia alias atque veniam dolores! Vel, magnam aut.</p>
+                </div>
+                <div class="box">
+                    <h2>Lorem, ipsum.</h2>
+                    <div class="ph" style="height: 200px;"></div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat corrupti dolorum repellat laudantium nisi, expedita repellendus animi velit, corporis nesciunt illo mollitia alias atque veniam dolores! Vel, magnam aut.</p>
+                </div>
+            </div>
+        </section>
+    </main>    
+    <script>
+        function displayMenu() {
+            var link = document.getElementById("open-nav");
+            link.classList.toggle("responsive");
+        }
+    </script>
+    
+</body>
+</html>
